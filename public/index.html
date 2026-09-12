@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image Converter</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Image Converter</h1>
+            <p class="subtitle">Convert PNG, JPG, WEBP, AVIF, TIFF - single files or whole folders.</p>
+
+            <div id="dropzone" class="dropzone">
+                <p>Drag & drop images or a folder here</p>
+                <p class="or">- or -</p>
+                <div class="btn-row">
+                    <label class="btn">
+                        Choose files
+                        <input type="file" id="fileInput" multiple accept="image/*" hidden />
+                    </label>
+                    <label class="btn">
+                        Choose Folder
+                        <input type="file" id="folderInput" webkitdirectory directory multiple hidden />
+                    </label>
+                </div>
+            </div>
+        
+            <div id="fileList" class="file-list"></div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="format">Convert to</label>
+                        <select id="format">
+                            <option value="png">PNG</option>
+                            <option value="jpeg">JPG / JPEG</option>
+                            <option value="webp">WEBP</option> 
+                            <option value="avif">AVIF</option>
+                            <option value="tiff">TIFF</option>                           
+                        </select>
+                    </div>
+
+                    <div class="control-group" id="qualityGroup" style="display: none;">
+                        <label for="quality">Quality: <span id="qualityValue">80</span></label>
+                        <input type="range" id="quality" min="1" max="100" value="80" />
+                    </div>
+
+                    <button id="convertBtn" class="btn primary" disabled>Convert</button>
+                </div>
+                <div id="status" class="status"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

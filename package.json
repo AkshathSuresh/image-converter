@@ -1,0 +1,19 @@
+{
+  "name": "image-converter",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^8.0.0",
+    "express": "^5.2.1",
+    "multer": "^2.3.0",
+    "sharp": "^0.35.4"
+  }
+}
