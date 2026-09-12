@@ -11,5 +11,6 @@ both files and folders accepted with drag and drop UI
 
 # Usage
 
-npm install
+npm install,
+
 npm start
